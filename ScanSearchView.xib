@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanSearchViewController">
+            <connections>
+                <outlet property="cameraView" destination="29" id="30"/>
+                <outlet property="searchDisplayController" destination="19" id="21"/>
+                <outlet property="view" destination="1" id="15"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Enter Barcode or Item Name" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="26"/>
+                    </connections>
+                </searchBar>
+                <view clipsSubviews="YES" multipleTouchEnabled="YES" tag="201" contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="29" userLabel="Camera View">
+                    <rect key="frame" x="0.0" y="51" width="375" height="578"/>
+                    <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38" userLabel="Info View">
+                    <rect key="frame" x="0.0" y="629" width="375" height="38"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="210" contentMode="left" text="Loading camera..." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="33">
+                            <rect key="frame" x="0.0" y="7" width="333" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="QQr-pA-JOR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="darkTextColor"/>
+                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                            <rect key="frame" x="333" y="4" width="22" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="22" id="Ef5-Z7-ydV"/>
+                                <constraint firstAttribute="height" constant="22" id="KTD-3c-Bpp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="33" firstAttribute="trailing" secondItem="36" secondAttribute="leading" id="7Sz-wF-DiO"/>
+                        <constraint firstItem="36" firstAttribute="top" secondItem="38" secondAttribute="top" constant="4" id="Ihf-F6-BJw"/>
+                        <constraint firstItem="33" firstAttribute="top" secondItem="38" secondAttribute="top" constant="7" id="Ns1-zR-Yw3"/>
+                        <constraint firstAttribute="bottom" secondItem="36" secondAttribute="bottom" constant="12" id="Qvv-f2-ZR2"/>
+                        <constraint firstItem="33" firstAttribute="leading" secondItem="38" secondAttribute="leading" id="S6o-yb-vwQ"/>
+                        <constraint firstAttribute="bottom" secondItem="33" secondAttribute="bottom" constant="12" id="aou-sE-Gk7"/>
+                        <constraint firstItem="36" firstAttribute="trailing" secondItem="38" secondAttribute="trailing" constant="-20" id="dgt-fx-sHr"/>
+                        <constraint firstAttribute="height" constant="38" id="mO0-DC-gP0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="38" firstAttribute="top" secondItem="29" secondAttribute="bottom" id="6Nw-dK-7kR"/>
+                <constraint firstItem="29" firstAttribute="top" secondItem="18" secondAttribute="bottom" id="A5Q-9c-jVA"/>
+                <constraint firstAttribute="trailing" secondItem="38" secondAttribute="trailing" id="E9T-eN-o7L"/>
+                <constraint firstAttribute="bottom" secondItem="38" secondAttribute="bottom" id="EBw-lf-YJU"/>
+                <constraint firstItem="38" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Gmv-eW-y9M"/>
+                <constraint firstAttribute="trailing" secondItem="29" secondAttribute="trailing" id="Hjh-Rx-jb3"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="1" secondAttribute="top" id="Lri-Gt-5qT"/>
+                <constraint firstAttribute="trailing" secondItem="18" secondAttribute="trailing" id="NlH-Oi-wCp"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="TQx-Qc-iRN"/>
+                <constraint firstItem="29" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="bFg-gV-Idd"/>
+            </constraints>
+            <point key="canvasLocation" x="-44.927536231884062" y="115.17857142857142"/>
+        </view>
+        <searchDisplayController id="19">
+            <connections>
+                <outlet property="delegate" destination="-1" id="25"/>
+                <outlet property="searchBar" destination="18" id="20"/>
+                <outlet property="searchContentsController" destination="-1" id="22"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="23"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="24"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
